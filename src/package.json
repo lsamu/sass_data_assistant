@@ -1,56 +1,43 @@
 {
-  "name": "electron-web-app",
-  "version": "0.0.9",
+  "name": "client_electron",
+  "version": "2.0.0",
+  "main": "dist/electron/main/index.js",
+  "description": "Really simple Electron + Vue + Vite boilerplate.",
+  "author": "lauxinyi",
+  "license": "MIT",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "electron:build": "vue-cli-service electron:build",
-    "electron:serve": "vue-cli-service electron:serve",
-    "electron:dev": "vue-cli-service electron:serve --mode dev",
-    "postinstall": "electron-builder install-app-deps",
-    "postuninstall": "electron-builder install-app-deps",
-    "count":"node ./script/count.js ./src"
-  },
-  "main": "background.js",
-  "dependencies": {
-    "@element-plus/icons-vue": "^2.0.6",
-    "codemirror": "^5.64.0",
-    "codemirror-editor-vue3": "^2.1.7",
-    "core-js": "^3.8.3",
-    "dayjs": "^1.11.4",
-    "docxtemplater": "^3.31.2",
-    "echarts": "^5.3.3",
-    "element-plus": "^2.2.9",
-    "lodash": "^4.17.21",
-    "mysql": "^2.18.1",
-    "node-xlsx": "^0.21.0",
-    "path-browserify": "^1.0.1",
-    "pinia": "^2.0.16",
-    "pizzip": "^3.1.1",
-    "require-all": "^3.0.0",
-    "string-format": "^2.0.0",
-    "vue": "^3.2.13",
-    "vue-router": "^4.0.3",
-    "vuex": "^4.0.0",
-    "xml2js": "^0.4.23"
+    "dev": "vite",
+    "serve": "vite",
+    "build": "vite build && electron-builder"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-router": "~5.0.0",
-    "@vue/cli-plugin-vuex": "~5.0.0",
-    "@vue/cli-service": "~5.0.0",
-    "electron": "^21.2.2",
-    "electron-devtools-installer": "^3.1.0",
-    "electron-log": "^4.4.8",
+    "@vitejs/plugin-vue": "^3.0.1",
+    "electron": "^20.0.2",
+    "electron-builder": "^23.3.3",
     "sass": "^1.54.9",
     "sass-loader": "^13.0.2",
-    "vue-cli-plugin-electron-builder": "~2.1.1"
+    "typescript": "^4.7.4",
+    "vite": "^3.0.8",
+    "vite-plugin-electron": "^0.9.3",
+    "vue": "^3.2.37",
+    "vue-tsc": "^0.40.1"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead",
-    "not ie 11"
-  ]
+  "keywords": [
+    "electron",
+    "rollup",
+    "vite",
+    "vue3",
+    "vue"
+  ],
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.0.9",
+    "dayjs": "^1.11.5",
+    "element-plus": "^2.2.16",
+    "lodash": "^4.17.21",
+    "pinia": "^2.0.22",
+    "unplugin-auto-import": "^0.11.2",
+    "vue-router": "^4.1.5",
+    "vuex": "^4.0.2"
+  }
 }
